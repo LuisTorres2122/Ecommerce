@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Ecommerce.Repository.Implementation;
 using Ecommerce.Repository.Interfaces;
+using Ecommerce.Utility;
 
 namespace Ecommerce.API
 {
@@ -20,6 +21,9 @@ namespace Ecommerce.API
                 //Services
                 services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
                 services.AddScoped<ISaleRepository, SaleRepository>();
+
+                //AutoMapperService
+                services.AddAutoMapper(typeof(AutoMapperProfile));
             });
         }
 

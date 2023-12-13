@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "xHMvFc0cWpPjr4VR0AmAbqvfYHwbYbyAKArs5oMhACowQv5SORMkfSmSSFM2IECKXVLSpJiK3zQvowMq5QmOfQ==",
+  "dgSpecHash": "f+mP3ORG4gsurRrWg3KyHdKbimNaBk6XK/FGCvj7RNO3WsmVGpF7o0+YCo+mGjopb9oWFvc7eIghtn84vBIjlQ==",
   "success": true,
   "projectFilePath": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.API\\Ecommerce.API.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\luist\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\luist\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\luist\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\luist\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\luist\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\luist\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\luist\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.25\\microsoft.entityframeworkcore.6.0.25.nupkg.sha512",

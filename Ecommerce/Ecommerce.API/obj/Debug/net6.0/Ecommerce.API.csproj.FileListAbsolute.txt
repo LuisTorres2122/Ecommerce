@@ -74,3 +74,5 @@ T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.API\bin\Debug\net6.0
 T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.API\bin\Debug\net6.0\Ecommerce.Model.pdb
 T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.API\bin\Debug\net6.0\Ecommerce.Repository.pdb
 T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.API\bin\Debug\net6.0\Ecommerce.Utility.pdb
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.API\bin\Debug\net6.0\AutoMapper.dll
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.API\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
