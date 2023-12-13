@@ -1,0 +1,11 @@
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\ecommerce.Services\bin\Debug\net6.0\ecommerce.Services.deps.json
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\ecommerce.Services\bin\Debug\net6.0\ecommerce.Services.dll
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\ecommerce.Services\bin\Debug\net6.0\ecommerce.Services.pdb
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\ecommerce.Services\obj\Debug\net6.0\ecommerce.Services.GeneratedMSBuildEditorConfig.editorconfig
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\ecommerce.Services\obj\Debug\net6.0\ecommerce.Services.AssemblyInfoInputs.cache
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\ecommerce.Services\obj\Debug\net6.0\ecommerce.Services.AssemblyInfo.cs
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\ecommerce.Services\obj\Debug\net6.0\ecommerce.Services.csproj.CoreCompileInputs.cache
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\ecommerce.Services\obj\Debug\net6.0\ecommerce.Services.dll
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\ecommerce.Services\obj\Debug\net6.0\refint\ecommerce.Services.dll
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\ecommerce.Services\obj\Debug\net6.0\ecommerce.Services.pdb
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\ecommerce.Services\obj\Debug\net6.0\ref\ecommerce.Services.dll
