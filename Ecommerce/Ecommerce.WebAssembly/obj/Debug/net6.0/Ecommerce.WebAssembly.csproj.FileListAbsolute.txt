@@ -818,3 +818,11 @@ T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\obj\Debu
 T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\obj\Debug\net6.0\refint\Ecommerce.WebAssembly.dll
 T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\obj\Debug\net6.0\Ecommerce.WebAssembly.pdb
 T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\obj\Debug\net6.0\ref\Ecommerce.WebAssembly.dll
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\bin\Debug\net6.0\wwwroot\_framework\Ecommerce.DTO.dll
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\bin\Debug\net6.0\wwwroot\_framework\Ecommerce.DTO.pdb
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\bin\Debug\net6.0\wwwroot\_framework\Ecommerce.DTO.pdb.gz
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\bin\Debug\net6.0\wwwroot\_framework\Ecommerce.DTO.dll.gz
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\bin\Debug\net6.0\Ecommerce.DTO.dll
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\bin\Debug\net6.0\Ecommerce.DTO.pdb
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\obj\Debug\net6.0\build-gz\zj3+NsC8.gz
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\obj\Debug\net6.0\build-gz\AhNYHvrd.gz

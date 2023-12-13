@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "a9xo/ntazXr2ir5UWJrTQhk+Y2aBw2VFjcDy954b+58=",
+  "Hash": "6eY+nmGleX+wr94YXBr3O+fHz/154Fj7VW08xH5KfVM=",
   "Source": "Ecommerce.WebAssembly",
   "BasePath": "/",
   "Mode": "Root",
@@ -100,6 +100,40 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\luist\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.21\\runtimes\\browser-wasm\\native\\dotnet.wasm"
+    },
+    {
+      "Identity": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Ecommerce.DTO.dll",
+      "SourceId": "Ecommerce.WebAssembly",
+      "SourceType": "Computed",
+      "ContentRoot": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Ecommerce.DTO.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.DTO\\bin\\Debug\\net6.0\\Ecommerce.DTO.dll"
+    },
+    {
+      "Identity": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Ecommerce.DTO.pdb",
+      "SourceId": "Ecommerce.WebAssembly",
+      "SourceType": "Computed",
+      "ContentRoot": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Ecommerce.DTO.pdb",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "symbol",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.DTO\\bin\\Debug\\net6.0\\Ecommerce.DTO.pdb"
     },
     {
       "Identity": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Ecommerce.WebAssembly.dll",
@@ -4080,6 +4114,23 @@
       "OriginalItemSpec": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Security.AccessControl.dll"
     },
     {
+      "Identity": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\obj\\Debug\\net6.0\\build-gz\\AhNYHvrd.gz",
+      "SourceId": "Ecommerce.WebAssembly",
+      "SourceType": "Computed",
+      "ContentRoot": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Ecommerce.DTO.pdb.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Ecommerce.DTO.pdb",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Ecommerce.DTO.pdb"
+    },
+    {
       "Identity": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\obj\\Debug\\net6.0\\build-gz\\AM42wBBU.gz",
       "SourceId": "Ecommerce.WebAssembly",
       "SourceType": "Computed",
@@ -6747,6 +6798,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Runtime.Numerics.dll"
+    },
+    {
+      "Identity": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\obj\\Debug\\net6.0\\build-gz\\zj3+NsC8.gz",
+      "SourceId": "Ecommerce.WebAssembly",
+      "SourceType": "Computed",
+      "ContentRoot": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Ecommerce.DTO.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Ecommerce.DTO.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Ecommerce.DTO.dll"
     },
     {
       "Identity": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\obj\\Debug\\net6.0\\build-gz\\ZJQOqlt6.gz",

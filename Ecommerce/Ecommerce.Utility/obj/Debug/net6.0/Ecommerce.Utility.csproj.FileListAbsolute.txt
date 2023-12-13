@@ -9,3 +9,9 @@ T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.Utility\obj\Debug\ne
 T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.Utility\obj\Debug\net6.0\refint\Ecommerce.Utility.dll
 T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.Utility\obj\Debug\net6.0\Ecommerce.Utility.pdb
 T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.Utility\obj\Debug\net6.0\ref\Ecommerce.Utility.dll
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.Utility\bin\Debug\net6.0\Ecommerce.DTO.dll
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.Utility\bin\Debug\net6.0\Ecommerce.Model.dll
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.Utility\bin\Debug\net6.0\Ecommerce.DTO.pdb
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.Utility\bin\Debug\net6.0\Ecommerce.Model.pdb
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.Utility\obj\Debug\net6.0\Ecommerce.Utility.csproj.AssemblyReference.cache
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.Utility\obj\Debug\net6.0\Ecommerce.Utility.csproj.CopyComplete

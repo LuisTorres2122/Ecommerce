@@ -9,3 +9,13 @@ T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\ecommerce.Services\obj\Debug\n
 T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\ecommerce.Services\obj\Debug\net6.0\refint\ecommerce.Services.dll
 T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\ecommerce.Services\obj\Debug\net6.0\ecommerce.Services.pdb
 T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\ecommerce.Services\obj\Debug\net6.0\ref\ecommerce.Services.dll
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\ecommerce.Services\bin\Debug\net6.0\Ecommerce.DTO.dll
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\ecommerce.Services\bin\Debug\net6.0\Ecommerce.Model.dll
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\ecommerce.Services\bin\Debug\net6.0\Ecommerce.Repository.dll
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\ecommerce.Services\bin\Debug\net6.0\Ecommerce.Utility.dll
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\ecommerce.Services\bin\Debug\net6.0\Ecommerce.DTO.pdb
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\ecommerce.Services\bin\Debug\net6.0\Ecommerce.Model.pdb
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\ecommerce.Services\bin\Debug\net6.0\Ecommerce.Repository.pdb
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\ecommerce.Services\bin\Debug\net6.0\Ecommerce.Utility.pdb
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\ecommerce.Services\obj\Debug\net6.0\ecommerce.Services.csproj.AssemblyReference.cache
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\ecommerce.Services\obj\Debug\net6.0\ecommerce.Services.csproj.CopyComplete

@@ -9,3 +9,6 @@ T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.Model\obj\Debug\net6
 T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.Model\obj\Debug\net6.0\refint\Ecommerce.Model.dll
 T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.Model\obj\Debug\net6.0\Ecommerce.Model.pdb
 T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.Model\obj\Debug\net6.0\ref\Ecommerce.Model.dll
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.Model\bin\Debug\net6.0\Ecommerce.Model.runtimeconfig.json
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.Model\obj\Debug\net6.0\Ecommerce.Model.csproj.AssemblyReference.cache
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.Model\obj\Debug\net6.0\Ecommerce.Model.genruntimeconfig.cache

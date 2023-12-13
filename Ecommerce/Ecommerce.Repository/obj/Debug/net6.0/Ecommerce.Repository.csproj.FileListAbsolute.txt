@@ -9,3 +9,7 @@ T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.Repository\obj\Debug
 T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.Repository\obj\Debug\net6.0\refint\Ecommerce.Repository.dll
 T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.Repository\obj\Debug\net6.0\Ecommerce.Repository.pdb
 T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.Repository\obj\Debug\net6.0\ref\Ecommerce.Repository.dll
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.Repository\bin\Debug\net6.0\Ecommerce.Model.dll
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.Repository\bin\Debug\net6.0\Ecommerce.Model.pdb
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.Repository\obj\Debug\net6.0\Ecommerce.Repository.csproj.AssemblyReference.cache
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.Repository\obj\Debug\net6.0\Ecommerce.Repository.csproj.CopyComplete
