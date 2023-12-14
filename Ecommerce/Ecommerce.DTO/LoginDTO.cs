@@ -11,9 +11,9 @@ namespace Ecommerce.DTO
     {
 
         [Required(ErrorMessage = "Ingrese correo"), EmailAddress(ErrorMessage = "No es un email valido")]
-        public string Email { get; set; } = null!;
+        public string Email { get; set; }
         [Required(ErrorMessage = "Ingrese contraseña")]
-        public string Password { get; set; } = null!;
+        public string Password { get; set; }
      
     } 
 }

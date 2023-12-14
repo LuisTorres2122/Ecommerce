@@ -11,8 +11,8 @@ namespace Ecommerce.Model
         }
 
         public int IdProduct { get; set; }
-        public string NameProduct { get; set; } = null!;
-        public string DescriptionProduct { get; set; } = null!;
+        public string NameProduct { get; set; }
+        public string DescriptionProduct { get; set; } 
         public int? IdCategory { get; set; }
         public decimal PriceProduct { get; set; }
         public decimal? OfferPriceProduct { get; set; }

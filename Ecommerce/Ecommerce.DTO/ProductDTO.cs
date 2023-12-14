@@ -11,9 +11,9 @@ namespace Ecommerce.DTO
     {
         public int Id { get; set; }
         [Required(ErrorMessage ="Ingrese el nombre del producto")]
-        public string Name { get; set; } = null!;
+        public string Name { get; set; }
         [Required(ErrorMessage = "Ingrese la descripción del producto")]
-        public string Description { get; set; } = null!;
+        public string Description { get; set; } 
         public int? IdCategory { get; set; }
         [Required(ErrorMessage = "Ingrese el precio del producto")]
         public decimal Price { get; set; }

@@ -12,13 +12,13 @@ namespace Ecommerce.DTO
 
         public int Id { get; set; }
         [Required(ErrorMessage ="Ingrese su nombre completo")]
-        public string Name { get; set; } = null!;
+        public string Name { get; set; }
         [Required(ErrorMessage = "Ingrese correo"), EmailAddress(ErrorMessage ="No es un email valido")]
-        public string Email { get; set; } = null!;
+        public string Email { get; set; }
         [Required(ErrorMessage = "Ingrese contraseña")]
-        public string Password { get; set; } = null!;
+        public string Password { get; set; }
         [Required(ErrorMessage = "Ingrese Confirmación contraseña")]
-        public string ConfirmPassword { get; set; } = null!;
+        public string ConfirmPassword { get; set; } 
         public string? Rol { get; set; }
 
     }

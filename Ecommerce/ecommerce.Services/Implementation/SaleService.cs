@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace ecommerce.Services.Implementation
 {
-    internal class SaleService : ISaleService
+    public class SaleService : ISaleService
     {
         private readonly ISaleRepository _saleRepository;
         private readonly IMapper _mapper;

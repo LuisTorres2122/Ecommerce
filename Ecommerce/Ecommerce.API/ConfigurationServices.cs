@@ -18,20 +18,31 @@ namespace Ecommerce.API
             services.AddDbContext<EcommerceContext>(opt =>
             {
                 opt.UseSqlServer(configuration.GetConnectionString("SqlServerConnection"));
+            });
 
 
+            //Services
+            services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
+            services.AddScoped<ISaleRepository, SaleRepository>();
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<ICategorySevice, CategoryService>();
+            services.AddScoped<ISaleService, SaleService>();
+            services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<IDashBoardService, DashBoardService>();
 
-                //Services
-                services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
-                services.AddScoped<ISaleRepository, SaleRepository>();
-                services.AddScoped<IUserService, UserService>();
-                services.AddScoped<ICategorySevice, CategoryService>();
-                services.AddScoped<ISaleService, ISaleService>();
-                services.AddScoped<IProductService, ProductService>();
-                services.AddScoped<IDashBoardService, DashBoardService>();
+            //AutoMapperService
+            services.AddAutoMapper(typeof(AutoMapperProfile));
 
-                //AutoMapperService
-                services.AddAutoMapper(typeof(AutoMapperProfile));
+            //Cors
+
+            services.AddCors(opt =>
+            {
+                opt.AddPolicy("Policy", app =>
+                {
+                    app.AllowAnyHeader()
+                    .AllowAnyMethod()
+                    .AllowAnyOrigin();
+                });
             });
         }
 

@@ -11,7 +11,7 @@ namespace Ecommerce.Model
         }
 
         public int IdCategory { get; set; }
-        public string NameCategory { get; set; } = null!;
+        public string NameCategory { get; set; }
 
         public virtual ICollection<Product> Products { get; set; }
     }

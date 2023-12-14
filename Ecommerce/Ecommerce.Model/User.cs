@@ -11,9 +11,9 @@ namespace Ecommerce.Model
         }
 
         public int IdUser { get; set; }
-        public string NameUser { get; set; } = null!;
-        public string EmailUser { get; set; } = null!;
-        public string PasswordUser { get; set; } = null!;
+        public string NameUser { get; set; } 
+        public string EmailUser { get; set; } 
+        public string PasswordUser { get; set; }
         public string? RolUser { get; set; }
         public DateTime? CreatedDateUser { get; set; }
 

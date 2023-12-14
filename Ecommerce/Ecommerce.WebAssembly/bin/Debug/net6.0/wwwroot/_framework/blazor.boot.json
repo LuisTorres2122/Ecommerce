@@ -196,14 +196,14 @@
       "mscorlib.dll": "sha256-ZQiPq7CHB7vwsbgiGeI63xqAYmfnZVwKnCDxwIIfh68=",
       "netstandard.dll": "sha256-OUZMjYvE6WNC75Ypitp3ukl0+FlDbSW+OYEIsU7XlgQ=",
       "System.Private.CoreLib.dll": "sha256-uJANsJB4HA9iyaKf1ryCSbtypfL2uQZWxXKIn0Fz5+c=",
-      "Ecommerce.DTO.dll": "sha256-WTKmipRw4SrOpkxOnA64lbayCs1L+gmUvCi2D0x\/WcM=",
+      "Ecommerce.DTO.dll": "sha256-MfVu4PyYq21xcncBxJYlgKonY0buNxVs5MVGX0af5OU=",
       "Ecommerce.WebAssembly.dll": "sha256-5oLWBVnSbsvtlurX5PcEroBpWbtwh47pgM5P7Ff30VA="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "Ecommerce.DTO.pdb": "sha256-Sqg5P81iP5rGVHnkwM6yZmSaCpng3wFQmL6d96WHGdU=",
+      "Ecommerce.DTO.pdb": "sha256-gb8BFU7\/5sdRTJLoN22baukAR6x4aEa6ymzNRSG3XsI=",
       "Ecommerce.WebAssembly.pdb": "sha256-YvjKroN9DTWILhG4KzNpDceaWm+SGqUSMocEIPYB8GY="
     },
     "runtime": {
