@@ -826,3 +826,11 @@ T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\bin\Debu
 T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\bin\Debug\net6.0\Ecommerce.DTO.pdb
 T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\obj\Debug\net6.0\build-gz\zj3+NsC8.gz
 T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\obj\Debug\net6.0\build-gz\AhNYHvrd.gz
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\bin\Debug\net6.0\wwwroot\_framework\Blazored.LocalStorage.dll
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\bin\Debug\net6.0\wwwroot\_framework\Blazored.Toast.dll
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\bin\Debug\net6.0\wwwroot\_framework\Blazored.Toast.dll.gz
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\bin\Debug\net6.0\wwwroot\_framework\Blazored.LocalStorage.dll.gz
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\bin\Debug\net6.0\Blazored.LocalStorage.dll
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\bin\Debug\net6.0\Blazored.Toast.dll
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\obj\Debug\net6.0\build-gz\pNY8Js6e.gz
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\obj\Debug\net6.0\build-gz\HYKv4qdW.gz

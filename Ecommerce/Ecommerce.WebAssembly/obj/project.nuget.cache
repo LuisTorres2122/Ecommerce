@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "E1eQf0vUCippR5unIgzjCAiV3XohkSzz+yE1hRBBRdfaGhYyl+BawPUmVPSwgh8VTEmheCUPKl0jbw5wy6j1pg==",
+  "dgSpecHash": "PaUnO/0aI16FxsQtl77NkhJHmfPpvSw1AdErOEmeWavCOy6Z7gAQ0tnuUI+mT3LElksRvGn6kUqNc0ulXeWhqw==",
   "success": true,
   "projectFilePath": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\Ecommerce.WebAssembly.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\luist\\.nuget\\packages\\blazored.localstorage\\4.4.0\\blazored.localstorage.4.4.0.nupkg.sha512",
+    "C:\\Users\\luist\\.nuget\\packages\\blazored.toast\\4.1.0\\blazored.toast.4.1.0.nupkg.sha512",
     "C:\\Users\\luist\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.24\\microsoft.aspnetcore.authorization.6.0.24.nupkg.sha512",
     "C:\\Users\\luist\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.24\\microsoft.aspnetcore.components.6.0.24.nupkg.sha512",
     "C:\\Users\\luist\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\6.0.24\\microsoft.aspnetcore.components.analyzers.6.0.24.nupkg.sha512",

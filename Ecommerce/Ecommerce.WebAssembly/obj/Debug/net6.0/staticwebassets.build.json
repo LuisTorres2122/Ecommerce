@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6eY+nmGleX+wr94YXBr3O+fHz/154Fj7VW08xH5KfVM=",
+  "Hash": "PADl8jgnK2qfRLtokC74Qszlg3OdAXRmRjezv++mmAo=",
   "Source": "Ecommerce.WebAssembly",
   "BasePath": "/",
   "Mode": "Root",
@@ -16,6 +16,23 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\luist\\.nuget\\packages\\blazored.toast\\4.1.0\\staticwebassets\\Blazored.Toast.bundle.scp.css",
+      "SourceId": "Blazored.Toast",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\luist\\.nuget\\packages\\blazored.toast\\4.1.0\\staticwebassets\\",
+      "BasePath": "_content/Blazored.Toast",
+      "RelativePath": "Blazored.Toast.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\luist\\.nuget\\packages\\blazored.toast\\4.1.0\\staticwebassets\\Blazored.Toast.bundle.scp.css"
+    },
     {
       "Identity": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\_framework\\blazor.boot.json",
       "SourceId": "Ecommerce.WebAssembly",
@@ -49,6 +66,40 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\luist\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\6.0.24\\build\\net6.0\\blazor.webassembly.js"
+    },
+    {
+      "Identity": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Blazored.LocalStorage.dll",
+      "SourceId": "Ecommerce.WebAssembly",
+      "SourceType": "Computed",
+      "ContentRoot": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.LocalStorage.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\luist\\.nuget\\packages\\blazored.localstorage\\4.4.0\\lib\\net6.0\\Blazored.LocalStorage.dll"
+    },
+    {
+      "Identity": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Blazored.Toast.dll",
+      "SourceId": "Ecommerce.WebAssembly",
+      "SourceType": "Computed",
+      "ContentRoot": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.Toast.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\luist\\.nuget\\packages\\blazored.toast\\4.1.0\\lib\\net6.0\\Blazored.Toast.dll"
     },
     {
       "Identity": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\_framework\\dotnet.6.0.21.6p5l470cr5.js",
@@ -4709,6 +4760,23 @@
       "OriginalItemSpec": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Diagnostics.StackTrace.dll"
     },
     {
+      "Identity": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\obj\\Debug\\net6.0\\build-gz\\HYKv4qdW.gz",
+      "SourceId": "Ecommerce.WebAssembly",
+      "SourceType": "Computed",
+      "ContentRoot": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.Toast.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Blazored.Toast.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Blazored.Toast.dll"
+    },
+    {
       "Identity": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\obj\\Debug\\net6.0\\build-gz\\i2L2AcA1.gz",
       "SourceId": "Ecommerce.WebAssembly",
       "SourceType": "Computed",
@@ -5506,6 +5574,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Runtime.CompilerServices.Unsafe.dll"
+    },
+    {
+      "Identity": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\obj\\Debug\\net6.0\\build-gz\\pNY8Js6e.gz",
+      "SourceId": "Ecommerce.WebAssembly",
+      "SourceType": "Computed",
+      "ContentRoot": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.LocalStorage.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Blazored.LocalStorage.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Blazored.LocalStorage.dll"
     },
     {
       "Identity": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\obj\\Debug\\net6.0\\build-gz\\pOpm5Xio.gz",
