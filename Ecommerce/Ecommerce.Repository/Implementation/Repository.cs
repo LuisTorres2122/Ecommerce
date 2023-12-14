@@ -34,7 +34,7 @@ namespace Ecommerce.Repository.Implementation
             }
             catch (Exception ex)
             {
-                throw;
+                throw ex;
             }
         }
 
@@ -48,7 +48,7 @@ namespace Ecommerce.Repository.Implementation
             }
             catch (Exception ex)
             {
-                throw;
+                throw ex;
             }
         }
 
@@ -62,7 +62,7 @@ namespace Ecommerce.Repository.Implementation
             }
             catch (Exception ex)
             {
-                throw;
+                throw ex;
             }
         }
     }
