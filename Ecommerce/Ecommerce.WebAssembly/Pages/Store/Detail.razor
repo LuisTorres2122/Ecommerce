@@ -1,0 +1,82 @@
+﻿@page "/Detail"
+@page "/Detail/{Id:int}"
+
+@using Ecommerce.DTO;
+@using Ecommerce.WebAssembly.Services.Interfaces;
+
+@inject IProducService productService;
+@inject ICartService cartService;
+
+
+<div class="container px-4 px-lg-5 my-5">
+
+
+    @if (productModel != null)
+    {
+        <div class="row gx-4 gx-lg-5 align-items-center">
+            <div class="col-md-6">
+                <img class="card-img-top border-dark border-1" src="@productModel.Image" style="width:100%;">
+            </div>
+            <div class="col-md-6">
+                <h1 class="display-5 fw-bolder">@productModel.Name</h1>
+                <div class="fs-5 mb-5">
+
+                    <span class="text-danger text-decoration-line-through">S/. @productModel.Price</span>
+                    <span>S /.@productModel.OfferPrice</span>
+
+                    <span>S /.@productModel.Price</span>
+                </div>
+                <p class="lead">@productModel.Description</p>
+                <div class="d-flex">
+                    <input class="form-control text-center me-3" type="number" min="1" style="width:60px" @bind-value="quantity">
+                    <button class="btn btn-outline-dark flex-shrink-0 me-3" type="button" @onclick="(async() => await AddToCar(productModel))">
+                        <i class="bi-cart-fill me-1"></i>
+                        Agregar al carrito
+                    </button>
+                    <a class="btn btn-outline-dark flex-shrink-0" href="/Catalog">
+                        <i class="bi-cart-fill me-1"></i>
+                        Volver
+                    </a>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    }
+
+
+
+</div>
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+    private int quantity = 1;
+    private ProductDTO productModel = new ProductDTO();
+
+
+
+    protected override async Task OnParametersSetAsync()
+    {
+        var response = await productService.GetProduct(Id);
+        if(response.ItsRight)
+            productModel = (ProductDTO)response.Result!;
+    }
+
+    private async Task AddToCar(ProductDTO productAdded)
+    {
+        decimal bestPrice = productAdded.OfferPrice != 0 && productAdded.OfferPrice < productAdded.Price ? productAdded.OfferPrice : productAdded.Price;
+        CartDTO cart = new CartDTO();
+        cart.Product = productAdded;
+        cart.Quantity = quantity;
+        cart.Price = bestPrice;
+        cart.Total = (decimal)quantity * bestPrice;
+
+        await cartService.AddCart(cart);
+    }
+
+}

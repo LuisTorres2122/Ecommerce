@@ -17,8 +17,8 @@ namespace Ecommerce.API.Controllers
             _productService = productService;
         }
 
-        [HttpGet("List/{browse:alpha}")]
-        public async Task<IActionResult> List(string browse)
+        [HttpGet("List/{browse:alpha?}")]
+        public async Task<IActionResult> List(string? browse)
         {
             var response = new ResponseDTO<List<ProductDTO>>();
             try

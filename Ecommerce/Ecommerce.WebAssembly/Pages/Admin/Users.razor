@@ -1,0 +1,117 @@
+﻿@page "/Users"
+@using Ecommerce.DTO;
+@using Ecommerce.WebAssembly.Services.Interfaces;
+@inject IUserService userService
+
+@inject SweetAlertService sweetAlert
+
+<!---->
+<div class="row justify-content-center  mt-3">
+    <div class="col-sm-6 col-md-4 col-xl-3 mb-4">
+        <div class="d-grid gap-1 col-12 mx-auto">
+            <a class="btn btn-primary" href="/User">Nuevo usuario</a>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-8 col-xl-9 mb-4">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Buscar usuario..." @bind-value="browse">
+            <button class="btn btn-outline-secondary" type="button" @onclick="(async()=> await getUsers(browse))">
+                <i class="oi oi-magnifying-glass"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="row gx-4 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 justify-content-start mt-2">
+
+    @if (userList != null)
+    {
+        foreach(var item in userList)
+        {
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <i class="oi oi-person" style="font-size:50px"></i>
+                        </div>
+                        <div class="text-start">
+                            <p class="m-1"><b>Nombre: </b>@item.Name</p>
+                            <p class="m-1"><b>Correo: </b>@item.Email</p>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <div class="row justify-content-between">
+                            <a class="col-5 btn btn-sm btn-outline-primary mt-auto" href="/User/@item.Id"><i class="oi oi-pencil fs-5"></i></a>
+                            <button class="col-5 btn btn-sm btn-outline-danger mt-auto" type="button" @onclick="(async () => await Delete(item))">
+                                <i class="oi oi-trash fs-5"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        
+    }
+    else
+    {
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    }
+
+</div>
+
+@code {
+    private List<UserDTO>? userList = null;
+    private string browse = "";
+
+
+    private async Task getUsers(string value = "")
+    {
+        var response = await userService.List("admin", value);
+        if (response.ItsRight)
+        {
+            userList = (List<UserDTO>)response.Result!;
+        }
+        else
+        {
+            userList = new List<UserDTO>();
+        }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await getUsers();
+    }
+
+    private async Task Delete(UserDTO user)
+    {
+        Console.WriteLine(user);
+        SweetAlertResult result = await sweetAlert.FireAsync(new SweetAlertOptions
+            {
+                Title = "Estas Seguro?",
+                Text = $"Eliminar Usuario {user.Name}",
+                Icon = SweetAlertIcon.Warning,
+                ShowCancelButton = true,
+                ConfirmButtonText = "Si, eliminar",
+                CancelButtonText = "No, volver"
+            });
+        
+        if (result.IsConfirmed)
+        {
+           
+            var response = await userService.Delete(user.Id);
+            Console.WriteLine(response);
+            if (response.ItsRight)
+            {
+                await getUsers();
+                Console.WriteLine("Si funciona");
+            }
+            else
+            {
+                Console.WriteLine("No funciona");
+            }
+        }
+    }
+
+}

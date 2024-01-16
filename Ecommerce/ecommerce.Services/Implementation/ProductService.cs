@@ -22,16 +22,42 @@ namespace ecommerce.Services.Implementation
             _productRepository = productRepository;
             _mapper = mapper;
         }
-        public async Task<List<ProductDTO>> Catalog(string category, string browse)
+        public async Task<List<ProductDTO>> Catalog(string category, string? browse)
         {
             try
             {
-                var query = _productRepository
-                    .get(p => p.IdCategoryNavigation.NameCategory.ToLower().Contains(category.ToLower()) &&
-                    p.NameProduct.ToLower().Contains(browse.ToLower()));
+                IQueryable<Product> query;
+                if (category == "All" && browse == null)
+                {
+                    query = _productRepository
+                       .get(p => p.IdCategoryNavigation.NameCategory != null);
+                }
+                else if (category == "All" && browse != null) 
+                {
+                    query = _productRepository
+                      .get(p => p.IdCategoryNavigation.NameCategory != null &&
+                      p.NameProduct.ToLower().Contains(browse.ToLower()));
+                }
+                else
+                {
+                    if (browse != null)
+                    {
+                        query = _productRepository
+                        .get(p => p.IdCategoryNavigation.NameCategory.ToLower().Contains(category.ToLower()) &&
+                        p.NameProduct.ToLower().Contains(browse.ToLower()));
+                    }
+                    else
+                    {
+                        query = _productRepository
+                        .get(p => p.IdCategoryNavigation.NameCategory.ToLower().Contains(category.ToLower()));
+                    }
+                }
+
+               
+                    
                 var list = await query.ToListAsync();
                 return _mapper.Map<List<ProductDTO>>(list);
-            }
+            } 
             catch (Exception ex)
             {
                 throw ex;
@@ -40,20 +66,21 @@ namespace ecommerce.Services.Implementation
 
         public async Task<ProductDTO> Create(ProductDTO product)
         {
-            try
-            {
-                var dbModel = _mapper.Map<Product>(product);
-                var ResponseRepository = await _productRepository.Create(dbModel);
-                if (ResponseRepository.IdProduct != 0)
-                    return _mapper.Map<ProductDTO>(ResponseRepository);
-                else
-                    throw new TaskCanceledException("No se puede crear");
+             try
+              {
+                 var newProduct = _mapper.Map<Product>(product);
+                 var savedProduct = await _productRepository.Create(newProduct);
+                 if (savedProduct.IdCategory != 0)
+                      return _mapper.Map<ProductDTO>(savedProduct);
+                  else
+                      throw new TaskCanceledException("No se pudo crear");
 
-            }
-            catch (Exception ex)
-            {
+             }
+             catch (Exception ex)
+             {
                 throw ex;
-            }
+             }
+               
         }
 
         public async Task<bool> Delete(int id)
@@ -99,9 +126,33 @@ namespace ecommerce.Services.Implementation
             }
         }
 
-        public Task<List<ProductDTO>> ProductList(string browse)
+        public async Task<List<ProductDTO>> ProductList(string? browse)
         {
-            throw new NotImplementedException();
+            try
+            {
+                IQueryable<Product> query;
+                if (browse != null)
+                {
+                    query = _productRepository.get(cat =>
+                            cat.NameProduct.ToLower().Contains(browse));
+                }
+                else
+                {
+                    Console.WriteLine("Si llego");
+                    query = _productRepository.get(cat =>
+                            cat.NameProduct != "");
+                }
+
+                var existingProduct = await query.ToListAsync();
+                if (existingProduct != null)
+                    return _mapper.Map<List<ProductDTO>>(existingProduct);
+                else
+                    throw new TaskCanceledException("No se encontro");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         public async Task<bool> Update(ProductDTO user)
@@ -118,7 +169,6 @@ namespace ecommerce.Services.Implementation
                     existingProduct.OfferPriceProduct = user.OfferPrice;
                     existingProduct.QuantityProduct = user.Quantity;
                     existingProduct.ImageProduct = user.Image;
-                    existingProduct.CreatedDateProduct = user.CreatedDateProduct;
                     var response = await _productRepository.Update(existingProduct);
                     if (!response)
                         throw new TaskCanceledException("No se pudo Editar");

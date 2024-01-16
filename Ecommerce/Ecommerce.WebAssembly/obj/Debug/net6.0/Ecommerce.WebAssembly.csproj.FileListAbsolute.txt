@@ -809,10 +809,7 @@ T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\obj\Debu
 T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\obj\Debug\net6.0\staticwebassets.pack.json
 T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\obj\Debug\net6.0\staticwebassets.build.json
 T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\obj\Debug\net6.0\staticwebassets.development.json
-T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\obj\Debug\net6.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
-T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\obj\Debug\net6.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
 T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\obj\Debug\net6.0\scopedcss\bundle\Ecommerce.WebAssembly.styles.css
-T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\obj\Debug\net6.0\scopedcss\projectbundle\Ecommerce.WebAssembly.bundle.scp.css
 T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\obj\Debug\net6.0\Ecommerce.WebAssembly.csproj.CopyComplete
 T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\obj\Debug\net6.0\Ecommerce.WebAssembly.dll
 T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\obj\Debug\net6.0\refint\Ecommerce.WebAssembly.dll
@@ -834,3 +831,7 @@ T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\bin\Debu
 T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\bin\Debug\net6.0\Blazored.Toast.dll
 T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\obj\Debug\net6.0\build-gz\pNY8Js6e.gz
 T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\obj\Debug\net6.0\build-gz\HYKv4qdW.gz
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\bin\Debug\net6.0\wwwroot\_framework\CurrieTechnologies.Razor.SweetAlert2.dll
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\bin\Debug\net6.0\wwwroot\_framework\CurrieTechnologies.Razor.SweetAlert2.dll.gz
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\bin\Debug\net6.0\CurrieTechnologies.Razor.SweetAlert2.dll
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\obj\Debug\net6.0\build-gz\eM4ziRqY.gz

@@ -13,9 +13,9 @@ namespace Ecommerce.WebAssembly.Services.Implementation
         {
             _httpClient = httpClient;
         }
-        public async Task<ResponseDTO<List<CategotyDTO>>> CategoryList(string browse)
+        public async Task<ResponseDTO<List<CategotyDTO>>> CategoryList(string? browse)
         {
-            return await _httpClient.GetFromJsonAsync<ResponseDTO<List<CategotyDTO>>>($"Category/List/{browse}");
+            return await _httpClient.GetFromJsonAsync<ResponseDTO<List<CategotyDTO>>>($"Category/CategoryList/{browse}");  
         }
 
         public async Task<ResponseDTO<CategotyDTO>> Create(CategotyDTO category)
@@ -28,7 +28,7 @@ namespace Ecommerce.WebAssembly.Services.Implementation
         public async Task<ResponseDTO<bool>> Delete(int id)
         {
 
-            var response = await _httpClient.DeleteAsync($"Category/Delete/{id}");
+            var response = await _httpClient.DeleteAsync($"Category/Delete?id={id}");
             if (response.IsSuccessStatusCode)
             {
                 return new ResponseDTO<bool> { Result = true, Message = "Se elimno Correctamente", ItsRight = true };

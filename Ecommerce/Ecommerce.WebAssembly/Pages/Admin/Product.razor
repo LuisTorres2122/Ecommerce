@@ -1,0 +1,170 @@
+﻿@page "/Product"
+@page "/Product/{Id:int}"
+
+@using Ecommerce.DTO;
+@using Ecommerce.WebAssembly.Services.Interfaces;
+
+@inject IProducService productService;
+@inject ICategoryService categoryService;
+@inject NavigationManager navigationManager;
+
+
+
+<div class="row justify-content-center  mt-3">
+    <p class="col-sm-12 col-md-8 col-xl-10 h4 mt-2">@Title</p>
+</div>
+<div class="row justify-content-center  mt-3">
+    <div class="col-sm-12 col-md-8 col-xl-10">
+
+        <EditForm Model="ProductModel" OnValidSubmit="saveChanges">
+               <DataAnnotationsValidator></DataAnnotationsValidator>
+            <div class="input-group">
+                <span class="input-group-text bg-light" id="basic-addon3">Nombre</span>
+                <input type="text" class="form-control" @bind-value="ProductModel.Name">
+            </div>
+               <ValidationMessage For="@(()=>ProductModel.Name)" />
+
+            <div class="input-group  mt-3">
+                <span class="input-group-text bg-light">Descripcion</span>
+                <textarea class="form-control" @bind="ProductModel.Description"></textarea>
+
+            </div>
+               <ValidationMessage For="@(()=>ProductModel.Description)" />
+
+            <div class="input-group mt-3">
+                <label class="input-group-text bg-light" for="inputGroupSelect01">Categoria</label>
+                <select class="form-select" value="@ProductModel.IdCategory" @onchange="ChangeCategory">
+                    @foreach (var item in CategoryList)
+                    {
+                        <option value="@item.Id">@item.Name</option>
+                    }
+                </select>
+            </div>
+
+
+            <div class="input-group mt-3">
+                <span class="input-group-text bg-light" id="basic-addon3">Precio</span>
+                <input type="number" class="form-control" @bind-value="ProductModel.Price">
+            </div>
+              <ValidationMessage For="@(()=>ProductModel.Price)" />
+
+            <div class="input-group mt-3">
+                <span class="input-group-text bg-light" id="basic-addon3">Precio Oferta</span>
+                <input type="number" class="form-control" @bind-value="ProductModel.OfferPrice">
+            </div>
+              <ValidationMessage For="@(()=>ProductModel.OfferPrice)" />
+
+            <div class="input-group mt-3">
+                <span class="input-group-text bg-light" id="basic-addon3">Cantidad</span>
+                <input type="number" class="form-control" @bind-value="ProductModel.Quantity">
+            </div>
+              <ValidationMessage For="@(()=>ProductModel.Quantity)" />
+
+            <div class="input-group mt-3">
+                <label class="input-group-text bg-light">Imagen</label>
+                <InputFile type="file" class="form-control" accept="image/png, image/gif, image/jpeg" OnChange="OnFileChange"></InputFile>
+            </div>
+           
+
+            <div class="mt-3">
+                <button type="submit" class="btn btn-primary" style="width:130px">@Button</button>
+                <a href="/Products" class="btn btn-secondary" style="width:130px">Volver</a>
+            </div>
+        </EditForm>
+
+
+
+
+    </div>
+
+</div>
+
+@code {
+    [Parameter] public int Id { get; set; }
+    private string Title = "Producto";
+    private string Button = "Crear";
+    private ProductDTO ProductModel = new ProductDTO();
+    private List<CategotyDTO> CategoryList = new List<CategotyDTO>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        var response = await categoryService.CategoryList("");
+        if (response.ItsRight)
+        {
+            CategoryList = (List<CategotyDTO>)response.Result!;
+            ProductModel.IdCategory = CategoryList.First().Id;
+        }
+
+        else
+            CategoryList = new List<CategotyDTO>();
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if(Id != 0)
+        {
+            Button = "Actulizar";
+            Title = "Editar Producto";
+        }
+
+        var response = await productService.GetProduct(Id);
+        if (response.ItsRight)
+        {
+            ProductModel = (ProductDTO)response.Result!;
+        }
+    }
+
+    private  async Task saveChanges()
+    {
+        if(Id != 0)
+        {
+            var response = await productService.Update(ProductModel);
+            if (response.ItsRight)
+            {
+                Console.WriteLine("Se ha actulizado correctamente");
+                navigationManager.NavigateTo("/Products");
+            }   
+            else
+                Console.WriteLine("No se ha actulizado");
+        }
+        else
+        {
+
+            var response = await productService.Create(ProductModel);
+            if (response.ItsRight)
+            {
+                Console.WriteLine("Se ha creado correctamente");
+                navigationManager.NavigateTo("/Products");
+            }           
+            else
+                Console.WriteLine("No se ha creado");
+           
+        }
+    }
+
+
+
+    private async Task ChangeCategory(ChangeEventArgs change)
+    {
+        ProductModel.IdCategory = Convert.ToInt32(change.Value!.ToString());
+    }
+
+    private async Task OnFileChange(InputFileChangeEventArgs e)
+    {
+        FileInfo fileInfo = new FileInfo(e.File.Name);
+        string fileExtension = Path.GetExtension(e.File.Name).ToLower();
+
+        if (fileExtension == ".jpg" || fileExtension == ".png")
+        {
+            var format = $"image/{fileExtension.Replace(".", "")}";
+            var resize = await e.File.RequestImageFileAsync(format, 450, 300);
+            var buffer = new byte[resize.Size];
+            await resize.OpenReadStream().ReadAsync(buffer);
+            var imageData = $"data:{format};base64,{Convert.ToBase64String(buffer)}";
+            ProductModel.Image = imageData;
+        }
+    }
+
+
+
+}

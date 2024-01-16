@@ -23,12 +23,23 @@ namespace ecommerce.Services.Implementation
             _mapper = mapper;
         }
 
-        public async Task<List<CategotyDTO>> CategoryList(string browse)
+        public async Task<List<CategotyDTO>> CategoryList(string? browse)
         {
             try
             {
-                var query = _categoryRepository.get(cat =>
-                cat.NameCategory.ToLower().Contains(browse));
+                IQueryable<Category> query;
+                if(browse != null)
+                {
+                    query = _categoryRepository.get(cat =>
+                            cat.NameCategory.ToLower().Contains(browse));
+                }
+                else
+                {
+                    Console.WriteLine("Si llego");
+                    query = _categoryRepository.get(cat =>
+                            cat.NameCategory != "");
+                }
+               
                 var existingCategory = await query.ToListAsync();
                 if (existingCategory != null)
                     return _mapper.Map<List<CategotyDTO>>(existingCategory);

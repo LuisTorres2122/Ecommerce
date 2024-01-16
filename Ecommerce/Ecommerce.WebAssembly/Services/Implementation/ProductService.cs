@@ -12,7 +12,7 @@ namespace Ecommerce.WebAssembly.Services.Implementation
         {
             _httpClient = httpClient;
         }
-        public async Task<ResponseDTO<List<ProductDTO>>> Catalog(string category, string browse)
+        public async Task<ResponseDTO<List<ProductDTO>>> Catalog(string category, string? browse)
         {
             return await _httpClient.GetFromJsonAsync<ResponseDTO<List<ProductDTO>>>($"Product/Catalog/{category}/{browse}");
         }
@@ -26,7 +26,7 @@ namespace Ecommerce.WebAssembly.Services.Implementation
 
         public async Task<ResponseDTO<bool>> Delete(int id)
         {
-            var response = await _httpClient.DeleteAsync($"Product/Delete/{id}");
+            var response = await _httpClient.DeleteAsync($"Product/Delete?id={id}");
             if (response.IsSuccessStatusCode)
             {
                 return new ResponseDTO<bool> { Result = true, Message = "Se elimno Correctamente", ItsRight = true };
@@ -43,7 +43,7 @@ namespace Ecommerce.WebAssembly.Services.Implementation
             return await _httpClient.GetFromJsonAsync<ResponseDTO<ProductDTO>>($"Product/GetById/{id}");
         }
 
-        public async Task<ResponseDTO<List<ProductDTO>>> ProductList(string browse)
+        public async Task<ResponseDTO<List<ProductDTO>>> ProductList(string? browse)
         {
             return await _httpClient.GetFromJsonAsync<ResponseDTO<List<ProductDTO>>>($"Product/List/{browse}");
         }

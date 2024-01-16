@@ -47,13 +47,12 @@ namespace Ecommerce.Utility
                 .ForMember(dest => dest.OfferPrice, opt => opt.MapFrom(src => src.OfferPriceProduct))
                 .ForMember(dest => dest.Quantity, opt => opt.MapFrom(src => src.QuantityProduct))
                 .ForMember(dest => dest.Image, opt => opt.MapFrom(src => src.ImageProduct))
-                .ForMember(dest => dest.CreatedDateProduct, opt => opt.MapFrom(src => src.CreatedDateProduct))
                 .ReverseMap();
 
             //Excepcion 
-            CreateMap<ProductDTO, Product>().ForMember(des => 
-            des.IdCategoryNavigation,
-            opt => opt.Ignore());
+          /*  CreateMap<ProductDTO, Product>()
+                .ForMember(des => des.IdCategoryNavigation,opt => opt.Ignore())
+                .ForMember(des => des.CreatedDateProduct,opt => opt.Ignore());*/
 
             //Map para detalleVenta
             CreateMap<DetailsSale, DetailsSaleDTO>()

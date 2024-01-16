@@ -1,5 +1,6 @@
 ﻿using Ecommerce.DTO;
 using Ecommerce.WebAssembly.Services.Interfaces;
+using System.Net;
 using System.Net.Http.Json;
 
 
@@ -30,15 +31,25 @@ namespace Ecommerce.WebAssembly.Services.Implementation
 
         public async Task<ResponseDTO<bool>> Delete(int id)
         {
-            var response = await _httpClient.DeleteAsync($"User/Delete/{id}");
+            var response = await _httpClient.DeleteAsync($"User/Delete?id={id}");
             if (response.IsSuccessStatusCode)
             {
-                return new ResponseDTO<bool> { Result = true, Message = "Se elimno Correctamente", ItsRight = true };
+                return new ResponseDTO<bool>()
+                {
+                    ItsRight = true,
+                    Message = "Se ha eliminado correctamente",
+                   
+                };
             }
             else
             {
-               
-                return new ResponseDTO<bool> { Result = false, Message = $"Algo salio mal: {response.StatusCode}", ItsRight = false };
+                return new ResponseDTO<bool>()
+                {
+                    ItsRight = false,
+                    Message = "No se ha eliminado",
+                   
+                };
+
             }
 
         }

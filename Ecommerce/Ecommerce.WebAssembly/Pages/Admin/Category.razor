@@ -1,0 +1,90 @@
+﻿@page "/Category"
+@page "/Category/{Id:int}"
+
+@using Ecommerce.DTO;
+@using Ecommerce.WebAssembly.Services.Interfaces;
+
+
+@inject ICategoryService categoryService;
+@inject NavigationManager navigationManager;
+@inject SweetAlertService sweetAlert;
+
+
+<div class="row justify-content-center  mt-3">
+    <p class="col-sm-12 col-md-8 col-xl-10 h4 mt-2">@Title</p>
+</div>
+<div class="row justify-content-center  mt-3">
+    <div class="col-sm-12 col-md-8 col-xl-10">
+
+        <EditForm Model="CategoryModel" OnValidSubmit="saveChanges">
+            <DataAnnotationsValidator></DataAnnotationsValidator>
+            <div class="input-group">
+                <span class="input-group-text bg-light">Nombre</span>
+                <input type="text" class="form-control" @bind-value="CategoryModel.Name">
+            </div>
+            <ValidationMessage For="@(()=>CategoryModel.Name)" />
+
+            <div class="mt-3">
+                <button type="submit" class="btn btn-primary" style="width:130px">@Button</button>
+                <a href="/categorias" class="btn btn-secondary" style="width:130px">Volver</a>
+            </div>
+        </EditForm>
+
+
+    </div>
+
+</div>
+
+@code {
+    [Parameter] public int Id { get; set; }
+
+    private CategotyDTO CategoryModel = new CategotyDTO();
+    private string Title = "Categorias";
+    private string Button = "Crear";
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if(Id != 0)
+        {
+            Title = "Editar Categoria";
+            Button = "Actualizar";
+        }
+
+        var response = await categoryService.GetCategory(Id);
+        if (response.ItsRight)
+        {
+            CategoryModel = (CategotyDTO)response.Result!;
+        }
+
+    }
+
+    private async Task saveChanges()
+    {
+        if(Id != 0)
+        {
+            var response = await categoryService.Update(CategoryModel);
+            if (response.ItsRight)
+            {
+                Console.WriteLine("Actulizado Corretamente");
+            }
+            else
+            {
+                Console.WriteLine("no se pudo actualizar");
+            }
+        }
+        else
+        {
+            var response = await categoryService.Create(CategoryModel);
+            if (response.ItsRight)
+            {
+                Console.WriteLine("Creado Corretamente");
+            }
+            else
+            {
+                Console.WriteLine("no se pudo crear");
+            }
+        }
+        navigationManager.NavigateTo("/Categories");
+    }
+
+}

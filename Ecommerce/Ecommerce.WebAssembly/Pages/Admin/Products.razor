@@ -1,0 +1,123 @@
+﻿@page "/Products"
+@using Ecommerce.DTO;
+@using Ecommerce.WebAssembly.Services.Interfaces;
+
+@inject IProducService productService;
+@inject SweetAlertService sweetAlertService;
+
+
+<div class="row justify-content-center  mt-3">
+    <div class="col-sm-6 col-md-4 col-xl-3 mb-4">
+        <div class="d-grid gap-1 col-12 mx-auto">
+            <a class="btn btn-primary" href="/Product">Nuevo producto</a>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-8 col-xl-9 mb-4">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Buscar producto..." @bind-value="browse">
+            <button class="btn btn-outline-secondary" type="button" @onclick="(async()=> await GetProducts(browse))">
+                <i class="oi oi-magnifying-glass"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="row gx-4 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 justify-content-start mt-2">
+
+    @if (productList != null)
+    {
+        foreach(var item in productList)
+        {
+        <div class="col mb-5">
+            <div class="card h-100">
+                <!-- Sale badge-->
+
+                <div class="badge bg-primary text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Nuevo</div>
+
+                <!-- Product image-->
+                <img class="card-img-top border-dark border-1" src="@item.Image">
+                <!-- Product details-->
+                <div class="card-body p-4">
+                    <div class="text-center">
+                        <!-- Product name-->
+                        <h5 class="fw-bolder">@item.Name</h5>
+                        <!-- Product price-->
+
+                        <span class="text-danger text-decoration-line-through">S/. @item.Price</span>
+                        <span>S /.@item.OfferPrice</span>
+
+                        <span>S /.@item.Price</span>
+
+
+                    </div>
+                </div>
+                <!-- Product actions-->
+                <div class="card-footer bg-transparent">
+                    <div class="row justify-content-between">
+                        <a class="col-5 btn btn-sm btn-outline-primary mt-auto" href="/Product/@item.Id"><i class="oi oi-pencil fs-5"></i></a>
+                        <button class="col-5 btn btn-sm btn-outline-danger mt-auto" @onclick="(async () => await Delete(item))">
+                            <i class="oi oi-trash fs-5"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        }
+       
+    }
+    else
+    {
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    }
+
+
+</div>
+
+@code {
+    private string browse = "";
+    private List<ProductDTO> productList = new List<ProductDTO>();
+
+
+    private async Task GetProducts(string value ="")
+    {
+        var response = await productService.ProductList(value);
+        if (response.ItsRight)
+        {
+            productList = (List<ProductDTO>)response.Result!;
+        }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await GetProducts();
+    }
+
+    private async Task Delete(ProductDTO product)
+    {
+        var box = await sweetAlertService.FireAsync(new SweetAlertOptions
+            {
+                Title = "Elimnar Producto",
+                Text = $"Desea eliminar el Producto {product.Name}",
+                Icon = SweetAlertIcon.Warning,
+                ShowCancelButton = true,
+                ConfirmButtonText = "Si, Eliminar",
+                CancelButtonText = "No, volver"
+            });
+
+        if (box.IsConfirmed)
+        {
+            var response = await productService.Delete(product.Id);
+            if (response.ItsRight)
+            {
+                Console.WriteLine("Se ha elimado correctamente");
+                await GetProducts();
+            }
+            else
+                Console.WriteLine("No se ha eliminado");
+        }
+
+    }
+
+}

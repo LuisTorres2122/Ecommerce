@@ -1,0 +1,162 @@
+﻿@page "/Cart"
+
+@using Ecommerce.DTO;
+@using Ecommerce.WebAssembly.Services.Interfaces;
+
+@inject ICartService cartService;
+
+<div class="row mt-4">
+
+@*    INFORMACION DE LOS PRODUCTOS AGREGADOS EN EL CARRITO*@
+
+    <div class="col-sm-8">
+        <div class="card mb-3">
+
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-sm bg-light table-bordered">
+                        <thead class="table-dark">
+                            <tr>
+                                <th style="width:102px"></th>
+                                <th>Producto</th>
+                                <th>Precio</th>
+                                <th>Cantidad</th>
+                                <th>Total</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @if (ProductCarts.Count>0)
+                            {
+                                foreach (var item in ProductCarts)
+                                {
+                                    <tr>
+                                        <td valign="middle">
+                                            <img class="card-img-top" src="@item.Product.Image" style="width:100px">
+                                        </td>
+                                        <td valign="middle">@item.Product.Name</td>
+                                        <td valign="middle">@item.Price</td>
+                                        <td valign="middle" align="center">
+                                            <div class="btn-group" role="group">
+                                                <button type="button" class="btn btn-outline-dark" @onclick="(() =>Decrease(item.Product.Id))">
+                                                    <i class="oi oi-minus"></i>
+                                                    </button>
+                                                <input class="form-control" readonly="readonly" style="width:50px" @bind-value="item.Quantity" />
+                                                <button type="button" class="btn btn-outline-dark" @onclick="(() =>Increase(item.Product.Id))">
+                                                    <i class="oi oi-plus"></i>
+                                                    </button>
+                                            </div>
+                                        </td>
+                                        <td valign="middle">@item.Total</td>
+                                        <td valign="middle">
+                                            <button type="button" class="btn btn-outline-dark" @onclick="(async () => await Delete(item.Product.Id))">
+                                                <i class="oi oi-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                }
+
+                                
+                            }else{
+                                <tr>
+                                    <td colspan="6">
+                                        <div class="alert alert-warning" role="alert">
+                                           No hay productos en el carrito
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                           <tr>
+                               <td>
+                                   <span>Total a Pagar: </span>
+                               </td>
+                                <td colspan="5" class="text-lg-center fw-bold bg-black text-white">
+                                     @sumProducts(ProductCarts)
+                                </td>
+                           </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+
+                
+            </div>
+
+         
+        </div>
+    </div>
+    
+@*    SE MUESTRA LA INFORMACION DE TARJETA Y OPCION DE PAGAR*@
+    <div class="col-sm-4">
+        <div class="card mb-3">
+            <div class="card-body">
+
+               @* COMENTAR TODO ESTO*@
+                <AuthorizeView>
+
+                    <NotAuthorized>
+                        <div class="alert alert-danger mt-2" role="alert">
+                            Debe iniciar sesion para poder realizar la compra
+                        </div>
+                    </NotAuthorized>
+                </AuthorizeView>
+
+
+            </div>
+        </div>
+        </div>
+</div>
+
+@code {
+    private List<CartDTO> ProductCarts = new List<CartDTO>();
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        ProductCarts = await cartService.getCart();
+        Console.WriteLine(ProductCarts.Count);
+    }
+
+    private void Decrease(int id)
+    {
+        var productExist = ProductCarts.First(p => p.Product.Id == id);
+        if (productExist != null)
+        {
+            productExist.Quantity -= 1;
+            productExist.Total = productExist.Price * productExist.Quantity;
+        }
+    }
+
+    private void Increase(int id)
+    {
+        var productExist = ProductCarts.First(p => p.Product.Id == id);
+        if (productExist != null)
+        {
+            productExist.Quantity += 1;
+            productExist.Total = productExist.Price * productExist.Quantity;
+        }
+    }
+
+    private async Task Delete(int id)
+    {
+        var productExist = ProductCarts.First(p => p.Product.Id == id);
+        if(productExist != null)
+            await cartService.RemoveCart(id);
+    }
+
+    private decimal sumProducts(List<CartDTO> products)
+    {
+        decimal total = 0;
+        foreach(var item in products)
+        {
+            total += item.Total;
+        }
+        return total;
+    }
+
+
+
+}
+

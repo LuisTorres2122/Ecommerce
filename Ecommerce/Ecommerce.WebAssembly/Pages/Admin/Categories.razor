@@ -1,0 +1,117 @@
+﻿@page "/Categories"
+
+@using Ecommerce.DTO;
+@using Ecommerce.WebAssembly.Services.Interfaces;
+
+@inject ICategoryService categoryService;
+@inject NavigationManager navigationManager;
+@inject SweetAlertService sweetAlert;
+
+
+<div class="row justify-content-center  mt-3">
+    <div class="col-sm-6 col-md-4 col-xl-3 mb-4">
+        <div class="d-grid gap-1 col-12 mx-auto">
+            <a class="btn btn-primary" href="/Category">Nueva Categoria</a>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-8 col-xl-9 mb-4">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Buscar categoria..." @bind-value="browse">
+            <button class="btn btn-outline-secondary" type="button" @onclick="(async()=> await getCategories(browse))">
+                <i class="oi oi-magnifying-glass"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="row gx-4 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 justify-content-start mt-2">
+
+    @if (CategoryList != null)
+    {
+        foreach(var item in CategoryList)
+        {
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <div class="text-center">
+                                <i class="oi oi-folder" style="font-size:50px"></i>
+                            </div>
+                            <div class="text-start">
+                                <p class="m-1"><b>Nombre:</b>@item.Name</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <div class="row justify-content-between">
+                            <a class="col-5 btn btn-sm btn-outline-primary mt-auto" href="/Category/@item.Id"><i class="oi oi-pencil fs-5"></i></a>
+                                <button class="col-5 btn btn-sm btn-outline-danger mt-auto" type="button" @onclick="(async () => await Delete(item))">
+                                <i class="oi oi-trash fs-5"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    }
+</div>
+
+
+@code {
+    private List<CategotyDTO>? CategoryList = null;
+    private string browse = "";
+
+    private async Task getCategories(string value = "")
+    {
+        var response = await categoryService.CategoryList(value);
+        if (response.ItsRight)
+        {
+            CategoryList = (List<CategotyDTO>)response.Result!;
+        }
+        else
+        {
+            CategoryList = new List<CategotyDTO>();
+        }
+       
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await getCategories();
+    }
+
+    private async Task Delete(CategotyDTO category)
+    {
+        var question = await sweetAlert.FireAsync(new SweetAlertOptions
+            {
+                Title = "Estas Seguro?",
+                Text = $"Desea eliminar el usuario{category.Name}",
+                Icon = SweetAlertIcon.Warning,
+                ShowCancelButton = true,
+                ConfirmButtonText = "Si, Eliminar",
+                CancelButtonText = "No, Volver"
+            });
+
+        if (question.IsConfirmed)
+        {
+            var response = await categoryService.Delete(category.Id);
+            if (response.ItsRight)
+            {
+                Console.WriteLine("Se ha elimnado Correctamente");
+                await getCategories();
+            }
+            else
+            {
+                Console.WriteLine("No se ha podido eliminar");
+            }
+        }
+
+
+    }
+}

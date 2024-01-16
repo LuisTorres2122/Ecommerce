@@ -1,5 +1,6 @@
 ﻿using Blazored.LocalStorage;
 using Blazored.Toast;
+using CurrieTechnologies.Razor.SweetAlert2;
 using Ecommerce.WebAssembly.Services.Implementation;
 using Ecommerce.WebAssembly.Services.Interfaces;
 
@@ -14,11 +15,12 @@ namespace Ecommerce.WebAssembly
            
             //Imports Package Nuget
             services.AddBlazoredLocalStorage();
-            services.AddBlazoredToast();
+           // services.AddBlazoredToast();
+            services.AddSweetAlert2();
 
             //servicios
             services.AddScoped<IUserService, UserService>();
-            services.AddScoped<ICarService, CarService>();
+            services.AddScoped<ICartService, CartService>();
             services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<IDashboard, DashBoardService>();
             services.AddScoped<IProducService, ProductService>();
