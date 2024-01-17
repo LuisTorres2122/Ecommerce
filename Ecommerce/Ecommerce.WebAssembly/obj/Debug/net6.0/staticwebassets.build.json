@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "8DYAvMuHIjeWgWDLODsIGJZ8x3egnXhpobwRuQpMdIE=",
+  "Hash": "hzligWLBYsdUBtBxoqivWPKbBvmBC+DUCYng2KLSjd8=",
   "Source": "Ecommerce.WebAssembly",
   "BasePath": "/",
   "Mode": "Root",
@@ -898,7 +898,24 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\luist\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.24\\lib\\net6.0\\Microsoft.AspNetCore.Authorization.dll"
+      "OriginalItemSpec": "C:\\Users\\luist\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.26\\lib\\net6.0\\Microsoft.AspNetCore.Authorization.dll"
+    },
+    {
+      "Identity": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Authorization.dll",
+      "SourceId": "Ecommerce.WebAssembly",
+      "SourceType": "Computed",
+      "ContentRoot": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.Authorization.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\luist\\.nuget\\packages\\microsoft.aspnetcore.components.authorization\\6.0.26\\lib\\net6.0\\Microsoft.AspNetCore.Components.Authorization.dll"
     },
     {
       "Identity": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.dll",
@@ -915,7 +932,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\luist\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.24\\lib\\net6.0\\Microsoft.AspNetCore.Components.dll"
+      "OriginalItemSpec": "C:\\Users\\luist\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.26\\lib\\net6.0\\Microsoft.AspNetCore.Components.dll"
     },
     {
       "Identity": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Forms.dll",
@@ -983,7 +1000,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\luist\\.nuget\\packages\\microsoft.aspnetcore.metadata\\6.0.24\\lib\\net6.0\\Microsoft.AspNetCore.Metadata.dll"
+      "OriginalItemSpec": "C:\\Users\\luist\\.nuget\\packages\\microsoft.aspnetcore.metadata\\6.0.26\\lib\\net6.0\\Microsoft.AspNetCore.Metadata.dll"
     },
     {
       "Identity": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.CSharp.dll",
@@ -4607,6 +4624,23 @@
       "OriginalItemSpec": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.AppContext.dll"
     },
     {
+      "Identity": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\obj\\Debug\\net6.0\\build-gz\\8+TfgyAc.gz",
+      "SourceId": "Ecommerce.WebAssembly",
+      "SourceType": "Computed",
+      "ContentRoot": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.dll"
+    },
+    {
       "Identity": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\obj\\Debug\\net6.0\\build-gz\\86SDXvx8.gz",
       "SourceId": "Ecommerce.WebAssembly",
       "SourceType": "Computed",
@@ -4826,23 +4860,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Drawing.Primitives.dll"
-    },
-    {
-      "Identity": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\obj\\Debug\\net6.0\\build-gz\\b+8gCY1+.gz",
-      "SourceId": "Ecommerce.WebAssembly",
-      "SourceType": "Computed",
-      "ContentRoot": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.AspNetCore.Metadata.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Metadata.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Metadata.dll"
     },
     {
       "Identity": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\obj\\Debug\\net6.0\\build-gz\\BgLQPpJc.gz",
@@ -5506,23 +5523,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Globalization.Extensions.dll"
-    },
-    {
-      "Identity": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\obj\\Debug\\net6.0\\build-gz\\j6iNa+o8.gz",
-      "SourceId": "Ecommerce.WebAssembly",
-      "SourceType": "Computed",
-      "ContentRoot": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.AspNetCore.Authorization.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll"
     },
     {
       "Identity": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\obj\\Debug\\net6.0\\build-gz\\JCXTDgQj.gz",
@@ -6375,6 +6375,23 @@
       "OriginalItemSpec": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Linq.Expressions.dll"
     },
     {
+      "Identity": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\obj\\Debug\\net6.0\\build-gz\\Q+G2r+Ti.gz",
+      "SourceId": "Ecommerce.WebAssembly",
+      "SourceType": "Computed",
+      "ContentRoot": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Authorization.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll"
+    },
+    {
       "Identity": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\obj\\Debug\\net6.0\\build-gz\\q0RyVXVl.gz",
       "SourceId": "Ecommerce.WebAssembly",
       "SourceType": "Computed",
@@ -6492,23 +6509,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.ComponentModel.dll"
-    },
-    {
-      "Identity": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\obj\\Debug\\net6.0\\build-gz\\QqJB0y5w.gz",
-      "SourceId": "Ecommerce.WebAssembly",
-      "SourceType": "Computed",
-      "ContentRoot": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.AspNetCore.Components.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.dll"
     },
     {
       "Identity": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\obj\\Debug\\net6.0\\build-gz\\qXGrWWt2.gz",
@@ -7106,6 +7106,23 @@
       "OriginalItemSpec": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Collections.dll"
     },
     {
+      "Identity": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\obj\\Debug\\net6.0\\build-gz\\vWkCJyBU.gz",
+      "SourceId": "Ecommerce.WebAssembly",
+      "SourceType": "Computed",
+      "ContentRoot": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.Authorization.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Authorization.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Authorization.dll"
+    },
+    {
       "Identity": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\obj\\Debug\\net6.0\\build-gz\\vzOK+AcM.gz",
       "SourceId": "Ecommerce.WebAssembly",
       "SourceType": "Computed",
@@ -7308,6 +7325,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Core.dll"
+    },
+    {
+      "Identity": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\obj\\Debug\\net6.0\\build-gz\\XPycieku.gz",
+      "SourceId": "Ecommerce.WebAssembly",
+      "SourceType": "Computed",
+      "ContentRoot": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Metadata.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Metadata.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Metadata.dll"
     },
     {
       "Identity": "T:\\Proyectos\\EcommerceGeneric\\Ecommerce\\Ecommerce\\Ecommerce.WebAssembly\\obj\\Debug\\net6.0\\build-gz\\XqsrgWp1.gz",

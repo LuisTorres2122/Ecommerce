@@ -1,8 +1,10 @@
 ﻿using Blazored.LocalStorage;
 using Blazored.Toast;
 using CurrieTechnologies.Razor.SweetAlert2;
+using Ecommerce.WebAssembly.Extensions;
 using Ecommerce.WebAssembly.Services.Implementation;
 using Ecommerce.WebAssembly.Services.Interfaces;
+using Microsoft.AspNetCore.Components.Authorization;
 
 namespace Ecommerce.WebAssembly
 {
@@ -25,6 +27,10 @@ namespace Ecommerce.WebAssembly
             services.AddScoped<IDashboard, DashBoardService>();
             services.AddScoped<IProducService, ProductService>();
             services.AddScoped<ISaleService, SaleService>();
+
+            //Authetication
+            services.AddAuthorizationCore();
+            services.AddScoped<AuthenticationStateProvider, AutenticationExtension>();
 
         }
     }

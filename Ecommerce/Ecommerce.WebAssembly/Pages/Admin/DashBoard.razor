@@ -4,6 +4,7 @@
 @using Ecommerce.WebAssembly.Services.Interfaces;
 
 @inject IDashboard dashBoardService;
+@attribute [Authorize(Roles = "admin")];
 
 <div class="row mt-4">
 

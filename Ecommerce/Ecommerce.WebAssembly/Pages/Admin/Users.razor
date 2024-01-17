@@ -1,9 +1,13 @@
 ﻿@page "/Users"
 @using Ecommerce.DTO;
 @using Ecommerce.WebAssembly.Services.Interfaces;
-@inject IUserService userService
 
-@inject SweetAlertService sweetAlert
+
+@inject IUserService userService;
+
+@inject SweetAlertService sweetAlert;
+@attribute [Authorize(Roles ="admin")];
+
 
 <!---->
 <div class="row justify-content-center  mt-3">

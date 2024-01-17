@@ -602,12 +602,9 @@ T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\obj\Debu
 T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\obj\Debug\net6.0\Ecommerce.WebAssembly.AssemblyInfo.cs
 T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\obj\Debug\net6.0\Ecommerce.WebAssembly.csproj.CoreCompileInputs.cache
 T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\obj\Debug\net6.0\Ecommerce.WebAssembly.MvcApplicationPartsAssemblyInfo.cache
-T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\obj\Debug\net6.0\build-gz\j6iNa+o8.gz
-T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\obj\Debug\net6.0\build-gz\QqJB0y5w.gz
 T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\obj\Debug\net6.0\build-gz\iUM7M4Ch.gz
 T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\obj\Debug\net6.0\build-gz\FL73II94.gz
 T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\obj\Debug\net6.0\build-gz\hBgnLWgi.gz
-T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\obj\Debug\net6.0\build-gz\b+8gCY1+.gz
 T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\obj\Debug\net6.0\build-gz\Zh+f94za.gz
 T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\obj\Debug\net6.0\build-gz\NMGIGJYv.gz
 T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\obj\Debug\net6.0\build-gz\LJGArwFf.gz
@@ -835,3 +832,10 @@ T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\bin\Debu
 T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\bin\Debug\net6.0\wwwroot\_framework\CurrieTechnologies.Razor.SweetAlert2.dll.gz
 T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\bin\Debug\net6.0\CurrieTechnologies.Razor.SweetAlert2.dll
 T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\obj\Debug\net6.0\build-gz\eM4ziRqY.gz
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Authorization.dll
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Authorization.dll.gz
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\bin\Debug\net6.0\Microsoft.AspNetCore.Components.Authorization.dll
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\obj\Debug\net6.0\build-gz\Q+G2r+Ti.gz
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\obj\Debug\net6.0\build-gz\8+TfgyAc.gz
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\obj\Debug\net6.0\build-gz\vWkCJyBU.gz
+T:\Proyectos\EcommerceGeneric\Ecommerce\Ecommerce\Ecommerce.WebAssembly\obj\Debug\net6.0\build-gz\XPycieku.gz

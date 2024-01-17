@@ -10,12 +10,13 @@
       "Blazored.LocalStorage.dll": "sha256-w2vMoqbIgF9UyzKqfDFXjqgg7IsGRHDvzb6DcyaPW6s=",
       "Blazored.Toast.dll": "sha256-GXXa2A08YD6PhpIFoBX+kgnsZS1fcddkt\/Sv5IUHdz8=",
       "CurrieTechnologies.Razor.SweetAlert2.dll": "sha256-ZtcnyZMjwbz1AT9+c1enyaTGZCWANbCxFnCqEcATz94=",
-      "Microsoft.AspNetCore.Authorization.dll": "sha256-MLKzvYNIHKFX9v72NDxI+Ng3W\/pu1M\/vuyU7rTIe+k8=",
-      "Microsoft.AspNetCore.Components.dll": "sha256-4KC894X5OekvnwX7N+NNaRXsWz\/c+W8HnLubh8gjmBM=",
+      "Microsoft.AspNetCore.Authorization.dll": "sha256-rxaMcq8hV3Ghq02xdjTphg+CcwUa93\/pNhkQdRfzyP4=",
+      "Microsoft.AspNetCore.Components.dll": "sha256-kW7qln6WGTpNE25zoDfBRy2OuCjZWR1Hstx7LCE48C8=",
+      "Microsoft.AspNetCore.Components.Authorization.dll": "sha256-pLsP1nvnL1RcsRQpLSL4hhnBLxhnCmnNYzyT2gxfczE=",
       "Microsoft.AspNetCore.Components.Forms.dll": "sha256-7ePmaCW7I5d90dlS3n4Wls\/gdGmoq22zlo+VbsJvB7o=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-0ZI4LHMjoT7kziqMdK78\/Y\/hNOIkEcPGRvp5sz5F4JU=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-VlvpDDA4R\/9rp2jt0Ur\/Dh+MhWAoTbn1Y8KXtyEsNpQ=",
-      "Microsoft.AspNetCore.Metadata.dll": "sha256-UObNbIq2GnBjfCKrV655TUZjCSh9FgOnPOHKiOd0tEU=",
+      "Microsoft.AspNetCore.Metadata.dll": "sha256-Hm7vxKjXU5L4mgBrz4rDl1zdhi9ME4On+74S2qk4IWg=",
       "Microsoft.Extensions.Configuration.dll": "sha256-c8yYhfrOBLEnOBglLTu9peXSbJDwFpuT4UQiXSv28Og=",
       "Microsoft.Extensions.Configuration.Abstractions.dll": "sha256-5Otet+KKVUjNkE\/hqcNWmt75H1K2VNuKPFagpRd6Ces=",
       "Microsoft.Extensions.Configuration.Binder.dll": "sha256-wNKhG3Ovx8jqxbscz2AALlsTLfI6GL2dyDhe63mSsoM=",
@@ -200,14 +201,14 @@
       "netstandard.dll": "sha256-OUZMjYvE6WNC75Ypitp3ukl0+FlDbSW+OYEIsU7XlgQ=",
       "System.Private.CoreLib.dll": "sha256-uJANsJB4HA9iyaKf1ryCSbtypfL2uQZWxXKIn0Fz5+c=",
       "Ecommerce.DTO.dll": "sha256-DYZYbTK32EHHjKiQeva0SW9AS40u8UQYI9hqcm0oHWw=",
-      "Ecommerce.WebAssembly.dll": "sha256-9frJBqA4p61QfUH3CCvqZA1cGu54yLaPC1hwbn2U+bs="
+      "Ecommerce.WebAssembly.dll": "sha256-6MelhKsmgb\/DLtQjCI8yG2kHev4xJhVveTmtj06kHSo="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
       "Ecommerce.DTO.pdb": "sha256-Ydn7nHxzus2T+3bzf4odHBfBe2okMHKh0xUHFHz6Khg=",
-      "Ecommerce.WebAssembly.pdb": "sha256-A702hz\/iwYCKH8HaWbzMeECXaHexuc82Qz\/G2NZ4UPc="
+      "Ecommerce.WebAssembly.pdb": "sha256-W3bH2JKtQASrK4IWFUfNvl7i\/JZBRZklDetrtp5giQg="
     },
     "runtime": {
       "dotnet.6.0.21.6p5l470cr5.js": "sha256-0OV6gibFzyVtG7NXEj8a6vG3u8Cbzv4l9kkEathZjQ8=",

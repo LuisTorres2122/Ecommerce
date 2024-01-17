@@ -2,8 +2,14 @@
 
 @using Ecommerce.DTO;
 @using Ecommerce.WebAssembly.Services.Interfaces;
+@using Microsoft.AspNetCore.Components.Authorization;
+@using System.Security.Claims;
+
 
 @inject ICartService cartService;
+@inject ISaleService saleService;
+
+
 
 <div class="row mt-4">
 
@@ -75,10 +81,16 @@
                                      @sumProducts(ProductCarts)
                                 </td>
                            </tr>
+                           
 
 
                         </tbody>
                     </table>
+                    <div class="mt-2">
+                        <div class="d-grid gap-1">
+                            <button class="btn btn-outline-secondary float-end" type="button" disabled="@disabled" @onclick="(async () => await ProccessPayment(ProductCarts))">Procesar pago</button>
+                        </div>
+                    </div>
                 </div>
 
                 
@@ -95,7 +107,7 @@
 
                @* COMENTAR TODO ESTO*@
                 <AuthorizeView>
-
+                    
                     <NotAuthorized>
                         <div class="alert alert-danger mt-2" role="alert">
                             Debe iniciar sesion para poder realizar la compra
@@ -110,13 +122,26 @@
 </div>
 
 @code {
+    [CascadingParameter]
+    private Task<AuthenticationState> authenticationState { get; set; }
+
     private List<CartDTO> ProductCarts = new List<CartDTO>();
+    private bool disabled = true;
+
+
 
 
     protected override async Task OnInitializedAsync()
     {
         ProductCarts = await cartService.getCart();
         Console.WriteLine(ProductCarts.Count);
+
+        var auth = await authenticationState;
+        if (auth.User.Identity.IsAuthenticated)
+        {
+            disabled = false;
+        }
+
     }
 
     private void Decrease(int id)
@@ -156,6 +181,42 @@
         return total;
     }
 
+    private async Task ProccessPayment(List<CartDTO> cart)
+    {
+
+
+        List<DetailsSaleDTO> newListDetails = new List<DetailsSaleDTO>();
+
+        foreach(var item in cart)
+        {
+            DetailsSaleDTO newDetails = new DetailsSaleDTO();
+            newDetails.IdProduct = item.Product.Id;
+            newDetails.Quantity = item.Quantity;
+            newDetails.Total = item.Total;
+            newListDetails.Add(newDetails);
+        }
+
+
+
+        var auth = await authenticationState;
+        string IdUser = auth.User.Claims.Where(c => c.Type == ClaimTypes.NameIdentifier).Select(c => c.Value).Single();
+        SaleDTO newSale = new SaleDTO()
+            {
+                IdUser = Convert.ToInt32(IdUser),
+                Total = cart.Sum(x => x.Total),
+                DetailsSales = newListDetails
+            };
+
+        var response = await saleService.Register(newSale);
+        if (response.ItsRight)
+        {
+            Console.WriteLine("Se ha realizado la compras");
+           await cartService.CleanCart();
+        }
+        
+        else
+            Console.WriteLine("No se ha realizado la compra"+ response.Message);
+    }
 
 
 }
