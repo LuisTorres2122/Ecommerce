@@ -8,6 +8,7 @@
 
 @inject ICartService cartService;
 @inject ISaleService saleService;
+@inject NavigationManager navigationManager;
 
 
 
@@ -183,20 +184,25 @@
 
     private async Task ProccessPayment(List<CartDTO> cart)
     {
+        if (ProductCarts.Count == 0)
+        {
+            Console.WriteLine("No hay elementos");
+            return;
+        }
 
 
         List<DetailsSaleDTO> newListDetails = new List<DetailsSaleDTO>();
 
         foreach(var item in cart)
         {
-            DetailsSaleDTO newDetails = new DetailsSaleDTO();
-            newDetails.IdProduct = item.Product.Id;
-            newDetails.Quantity = item.Quantity;
-            newDetails.Total = item.Total;
-            newListDetails.Add(newDetails);
+            newListDetails.Add(new DetailsSaleDTO()
+            {
+                IdProduct = item.Product.Id,
+                Quantity = item.Quantity,
+                Total = item.Total
+            });
+           
         }
-
-
 
         var auth = await authenticationState;
         string IdUser = auth.User.Claims.Where(c => c.Type == ClaimTypes.NameIdentifier).Select(c => c.Value).Single();
@@ -207,11 +213,16 @@
                 DetailsSales = newListDetails
             };
 
+        Console.WriteLine(newListDetails[0].IdProduct);
+        Console.WriteLine(newListDetails[0].Quantity);
+        Console.WriteLine(newListDetails[0].Total);
+       
         var response = await saleService.Register(newSale);
         if (response.ItsRight)
         {
             Console.WriteLine("Se ha realizado la compras");
-           await cartService.CleanCart();
+            await cartService.CleanCart();
+            navigationManager.NavigateTo("/Catalog");
         }
         
         else

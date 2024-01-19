@@ -18,7 +18,7 @@ namespace Ecommerce.API.Controllers
 
 
         [HttpPost("Register")]
-        public async Task<IActionResult> Register([FromBody] SaleDTO sale)
+        public async Task<IActionResult> Register(SaleDTO sale)
         {
             var response = new ResponseDTO<SaleDTO>();
             try

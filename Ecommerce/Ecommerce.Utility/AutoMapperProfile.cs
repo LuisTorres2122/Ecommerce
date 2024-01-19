@@ -50,27 +50,44 @@ namespace Ecommerce.Utility
                 .ReverseMap();
 
             //Excepcion 
-          /*  CreateMap<ProductDTO, Product>()
-                .ForMember(des => des.IdCategoryNavigation,opt => opt.Ignore())
-                .ForMember(des => des.CreatedDateProduct,opt => opt.Ignore());*/
+            /*  CreateMap<ProductDTO, Product>()
+                  .ForMember(des => des.IdCategoryNavigation,opt => opt.Ignore())
+                  .ForMember(des => des.CreatedDateProduct,opt => opt.Ignore());*/
+
+
 
             //Map para detalleVenta
             CreateMap<DetailsSale, DetailsSaleDTO>()
-                 .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.IdDetailSale))
-                 .ForMember(dest => dest.IdProduct, opt => opt.MapFrom(src => src.IdProduct))
-                 .ForMember(dest => dest.Quantity, opt => opt.MapFrom(src => src.QuantityProduct))
-                 .ForMember(dest => dest.Total, opt => opt.MapFrom(src => src.TotalProduct))
-                 .ReverseMap();
-            
+            .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.IdDetailSale))
+            .ForMember(dest => dest.IdProduct, opt => opt.MapFrom(src => src.IdProduct))
+            .ForMember(dest => dest.Quantity, opt => opt.MapFrom(src => src.QuantityProduct))
+            .ForMember(dest => dest.Total, opt => opt.MapFrom(src => src.TotalProduct));
 
+            CreateMap<DetailsSaleDTO, DetailsSale>()
+                .ForMember(dest => dest.IdDetailSale, opt => opt.MapFrom(src => src.Id))
+                .ForMember(dest => dest.IdProduct, opt => opt.MapFrom(src => src.IdProduct))
+                .ForMember(dest => dest.QuantityProduct, opt => opt.MapFrom(src => src.Quantity))
+                .ForMember(dest => dest.TotalProduct, opt => opt.MapFrom(src => src.Total))
+                .ForMember(dest => dest.IdSale, opt => opt.Ignore())
+                .ForMember(dest => dest.IdProductNavigation, opt => opt.Ignore())
+                .ForMember(dest => dest.IdSaleNavigation, opt => opt.Ignore());
+
+
+          
             //Map para Venta
             CreateMap<Sale, SaleDTO>()
                  .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.IdSale))
                  .ForMember(dest => dest.IdUser, opt => opt.MapFrom(src => src.IdUser))
                  .ForMember(dest => dest.Total, opt => opt.MapFrom(src => src.TotalSale))
-                 .ForMember(dest => dest.CreatedDate, opt => opt.MapFrom(src => src.CreatedDateSale))
-                 .ReverseMap();
-          
+                 .ForMember(dest => dest.CreatedDate, opt => opt.MapFrom(src => src.CreatedDateSale));
+
+            CreateMap<SaleDTO, Sale>()
+                .ForMember(dest => dest.IdSale, opt => opt.MapFrom(src => src.Id))
+                .ForMember(dest => dest.IdUser, opt => opt.MapFrom(src => src.IdUser))
+                .ForMember(dest => dest.TotalSale, opt => opt.MapFrom(src => src.Total))
+                .ForMember(dest => dest.CreatedDateSale, opt => opt.MapFrom(src => src.CreatedDate))
+                .ForMember(dest => dest.IdUserNavigation, opt => opt.Ignore());
+
 
 
         }

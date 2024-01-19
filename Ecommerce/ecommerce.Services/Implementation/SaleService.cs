@@ -25,9 +25,9 @@ namespace ecommerce.Services.Implementation
             try
             {
                 var newSale = _mapper.Map<Sale>(sale);
-                var createdSale = _saleRepository.Register(newSale);
+                var createdSale = await _saleRepository.Register(newSale);
 
-                if (createdSale.Id != 0)
+                if (createdSale.IdSale != 0)
                     return _mapper.Map<SaleDTO>(createdSale);
                 else
                     throw new TaskCanceledException("No se pudo registrar");

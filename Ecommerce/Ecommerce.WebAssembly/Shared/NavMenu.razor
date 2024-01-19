@@ -32,8 +32,8 @@
             </ul>
             <AuthorizeView >
                  <Authorized>
-                    <span class="navbar-text me-3">
-                        @context.User.Claims.Where(c => c.Type == ClaimTypes.Email).Select(c => c.Value).SingleOrDefault();
+                    <span class="navbar-text me-3 fw-bold">
+                        @context.User.Claims.Where(c => c.Type == ClaimTypes.Email).Select(c => c.Value).SingleOrDefault()
                     </span>
                  </Authorized>
             </AuthorizeView>
